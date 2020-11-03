@@ -1,7 +1,7 @@
 <?php session_start(); 
 include('connection.php'); ?>
 
-	<?php if(isset($_POST['pay']) and isset($_POST['delete'])){
+	<?php if(isset($_POST['pay']) or isset($_POST['delete'])){
 			$query="DELETE FROM cart";
 			mysqli_query($conn,$query);
 		}

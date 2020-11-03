@@ -53,7 +53,7 @@
 
 <body>
 	<center>
-		<div style="border: 3px solid blue; padding: 0px 35px 70px 50px; background-image: url('images/bg_menu.gif') ;">
+		<div style="border: 3px solid blue; padding: 0px 35px 70px 50px;  background-color: GhostWhite;">
 			<h2><p style="padding-top: 60px;"><?php echo "Login to order your food"; ?></p></h2>
 			<form style="padding-top: 150px; padding-bottom: 150px;" action="login.php" method="POST">
 				Email:<input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>"><br>

@@ -22,7 +22,7 @@
 	<title>Menu</title>
 </head>
 <body>
-	<div align="center" style="padding-top: 50px;">
+	<div align="center" style="padding-top: 50px; background-color:GhostWhite;">
 	<div><h1>Breakfast: </h1></div>
 	<?php foreach ($row_br as $breakfast): ?>
 		<div style="display: inline-block;">

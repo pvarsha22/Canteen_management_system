@@ -41,12 +41,12 @@
 <body>
 	<h3 style="padding-left: 450px;">Your orders :</h3><br>
 	<center><div style="padding-top: 15px">
-		<div style="border: 3px solid blue; padding: 10px 35px 70px 50px;background-image: url('images/bg_menu.gif') ;">
+		<div style="border: 3px solid blue; padding: 10px 35px 70px 50px;background-color: GhostWhite;">
 		<table> 
 			<?php foreach ($row as $food): ?>
 				<tr><td><h4><?php echo $food['name']."&nbsp;"."&nbsp;"."&nbsp;".":"."&nbsp;"."&nbsp;"."&nbsp;"."Rs".$food['price']; ?></h4></td>
 				<td><form action="cart.php" method="POST" >
-				<button type="submit" name="remove" value="<?php echo $food['id']; ?>">Remove item</button><br>
+				<button type="submit" name="remove" value="<?php echo $food['order_id']; ?>">Remove item</button><br>
 				</form></td><br></tr>
 			<?php endforeach ?><br><br>
 			<tr>
