@@ -6,6 +6,15 @@ include('connection.php'); ?>
 			mysqli_query($conn,$query);
 		}
 	?>
+	<?php 
+		if(isset($_POST['pay'])){
+			$sql="INSERT INTO payment(status) VALUES('Paid')";
+		}
+		if(isset($_POST['delete'])){
+			$sql="INSERT INTO payment(status) VALUES('Cancelled')";
+		}
+		$res=mysqli_query($conn,$sql);
+	?>
 
 
  <!DOCTYPE html>
