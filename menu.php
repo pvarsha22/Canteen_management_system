@@ -14,6 +14,10 @@
 	$sql_di="SELECT * from menu where type='dinner'";
 	$res_di=mysqli_query($conn,$sql_di);
 	$row_di=mysqli_fetch_all($res_di,MYSQLI_ASSOC);
+
+	$sql_spl="SELECT * from menu where type='special'";
+	$res_spl=mysqli_query($conn,$sql_spl);
+	$row_spl=mysqli_fetch_all($res_spl,MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -23,36 +27,47 @@
 </head>
 <body>
 	<div align="center" style="padding-top: 50px; background-color:GhostWhite;">
-	<div><h1>Breakfast: </h1></div>
+	<div><h1>Breakfast : </h1></div>
 	<?php foreach ($row_br as $breakfast): ?>
 		<div style="display: inline-block;">
 			<h4>Name: <?php echo $breakfast['name']."<br>"; ?>
 			Price: <?php echo $breakfast['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$breakfast['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $breakfast['id']; ?>">Add item</button><br><br>
+			<button type="submit" name="add" value="<?php echo $breakfast['id']; ?>">Add</button><br><br>
 			</form><br>
 		</div>
 	<?php endforeach ?><br><br>
-	<div><h1>Lunch: </h1></div>
+	<div><h1>Lunch : </h1></div>
 	<?php foreach ($row_lu as $lunch): ?>
 		<div style="display: inline-block;">
 			<h4>Name: <?php echo $lunch['name']."<br>"; ?>
 			Price: <?php echo $lunch['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$lunch['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $lunch['id']; ?>">Add item</button><br><br>
+			<button type="submit" name="add" value="<?php echo $lunch['id']; ?>">Add</button><br><br>
 			</form>
 		</div>
 	<?php endforeach ?><br><br>
-	<div><h1>Dinner: </h1></div>
+	<div><h1>Dinner : </h1></div>
 	<?php foreach ($row_di as $dinner): ?>
 		<div style="display: inline-block;">
 			<h4>Name: <?php echo $dinner['name']."<br>"; ?>
 			Price: <?php echo $dinner['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$dinner['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $dinner['id']; ?>">Add item</button><br><br><br><br>
+			<button type="submit" name="add" value="<?php echo $dinner['id']; ?>">Add</button><br><br><br><br>
+			</form>
+		</div>
+	<?php endforeach ?><br><br>
+	<div><h1>Today's Special : </h1></div>
+	<?php foreach ($row_spl as $spl): ?>
+		<div style="display: inline-block;">
+			<h4>Name: <?php echo $spl['name']."<br>"; ?>
+			Price: <?php echo $spl['price']."<br>"; ?></h4>
+			<img src="<?php echo "images/".$spl['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
+			<form method="POST" action="cart.php">
+			<button type="submit" name="add" value="<?php echo $spl['id']; ?>">Add</button><br><br>
 			</form>
 		</div>
 	<?php endforeach ?><br><br>
