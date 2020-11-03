@@ -66,10 +66,10 @@
 				<div style="color: red"><?php echo $errors['email']; ?></div>	
 				Password:<input type="password" name="password">
 				<div style="color: red"><?php echo $errors['password']; ?></div><br>
-				<button type="submit" name="signin" >Sign in</button>
+				<button style="border-radius: 15px;" type="submit" name="signin" >Sign in</button>
 			</form>
 			<form method="POST" action="menu.php">
-				Enter as a Guest: <button type="submit" name="guest">Click here</button><br><br>
+				Enter as a Guest: <button style="border-radius: 15px;" type="submit" name="guest">Click here</button><br><br>
 			</form>
 		</div>
 	</center>>

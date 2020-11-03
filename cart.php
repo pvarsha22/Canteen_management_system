@@ -46,15 +46,15 @@
 			<?php foreach ($row as $food): ?>
 				<tr><td><h4><?php echo $food['name']."&nbsp;"."&nbsp;"."&nbsp;".":"."&nbsp;"."&nbsp;"."&nbsp;"."Rs".$food['price']; ?></h4></td>
 				<td><form action="cart.php" method="POST" >
-				<button type="submit" name="remove" value="<?php echo $food['order_id']; ?>">Remove item</button><br>
+				<button style="border-radius: 15px;" type="submit" name="remove" value="<?php echo $food['order_id']; ?>">Remove item</button><br>
 				</form></td><br></tr>
 			<?php endforeach ?><br><br>
 			<tr>
 				<td><form action="menu.php" method="POST" >
-				<button type="submit" name="add_more" value="<?php echo $food['f_id']; ?>">Add more items</button><br><br>
+				<button style="border-radius: 15px;" type="submit" name="add_more" value="<?php echo $food['f_id']; ?>">Add more items</button><br><br>
 				</form></td>
 				<td><form action="bill.php" method="POST" >
-					<button type="submit" name="order" value="<?php echo $food['f_id']; ?>">Place order</button><br><br>
+					<button style="border-radius: 15px;" type="submit" name="order" value="<?php echo $food['f_id']; ?>">Place order</button><br><br>
 				</form></td>
 			</tr>
 		</table>

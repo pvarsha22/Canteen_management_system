@@ -26,12 +26,12 @@ include('connection.php'); ?>
 	<tr><h3> Total :   <?php echo "Rs. ".$total; ?></h3></tr>
 	<tr><td><h3><?php echo "Want to cancel the order before the service?"."<br>"; ?></td></h3>
 		<td><form action="exit.php" method="POST" >
-			<button type="submit" name="delete">Cancel order</button><br><br>
+			<button style="border-radius: 15px;" type="submit" name="delete">Cancel order</button><br><br>
 		</form></td>
 	</tr>
 	<tr><td><h3><?php echo "Make payment"."<br>"; ?></td></h3>
 		<td><form action="exit.php" method="POST" >
-			<button type="submit" name="pay">Pay</button><br><br>
+			<button style="border-radius: 15px;" type="submit" name="pay">Pay</button><br><br>
 		</form></td>
 	</tr>
 

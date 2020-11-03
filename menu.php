@@ -34,7 +34,7 @@
 			Price: <?php echo $breakfast['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$breakfast['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $breakfast['id']; ?>">Add</button><br><br>
+			<button style="border-radius: 15px;" type="submit" name="add" value="<?php echo $breakfast['id']; ?>">Add</button><br><br>
 			</form><br>
 		</div>
 	<?php endforeach ?><br><br>
@@ -45,7 +45,7 @@
 			Price: <?php echo $lunch['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$lunch['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $lunch['id']; ?>">Add</button><br><br>
+			<button style="border-radius: 15px;" type="submit" name="add" value="<?php echo $lunch['id']; ?>">Add</button><br><br>
 			</form>
 		</div>
 	<?php endforeach ?><br><br>
@@ -56,7 +56,7 @@
 			Price: <?php echo $dinner['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$dinner['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $dinner['id']; ?>">Add</button><br><br><br><br>
+			<button style="border-radius: 15px;" type="submit" name="add" value="<?php echo $dinner['id']; ?>">Add</button><br><br><br><br>
 			</form>
 		</div>
 	<?php endforeach ?><br><br>
@@ -67,7 +67,7 @@
 			Price: <?php echo $spl['price']."<br>"; ?></h4>
 			<img src="<?php echo "images/".$spl['id'].".jpg"; ?>" width="300" height="300" style="vertical-align:middle;margin:0px 50px"><br><br>
 			<form method="POST" action="cart.php">
-			<button type="submit" name="add" value="<?php echo $spl['id']; ?>">Add</button><br><br>
+			<button style="border-radius: 15px;" type="submit" name="add" value="<?php echo $spl['id']; ?>">Add</button><br><br>
 			</form>
 		</div>
 	<?php endforeach ?><br><br>
