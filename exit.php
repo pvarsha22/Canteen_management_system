@@ -8,10 +8,10 @@ include('connection.php'); ?>
 	?>
 	<?php 
 		if(isset($_POST['pay'])){
-			$sql="INSERT INTO payment(status) VALUES('Paid')";
+			$sql="INSERT INTO payment(status) VALUES('Bill paid')";
 		}
 		if(isset($_POST['delete'])){
-			$sql="INSERT INTO payment(status) VALUES('Cancelled')";
+			$sql="INSERT INTO payment(status) VALUES('Order cancelled')";
 		}
 		$res=mysqli_query($conn,$sql);
 	?>
